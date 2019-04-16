@@ -1,8 +1,13 @@
 # LabVIEW-DAQ
 LabVIEW VIs for behavioral characterization for both Intrinsic Optical Signal and Two-Photon imaging set-ups. This README will break down the different components and give a brief run-down of the respective parameters.
-The documentation, user manuals, diagrams, and spec sheets linked in this repository are freely available online or upon request, and are compiled in this repository for educational/research purposes only. **The company names, product names, and documentation outlined in this README are trademarks, registered trademarks, or copyrights of the respective companies.**
+The documentation, user manuals, diagrams, and spec sheets linked in this repository are freely available online or upon request. **The company names and product names outlined in this README are trademarks, registered trademarks, or copyrights of the respective companies.**
 
 ## Two-Photon Excitation Microscopy
+
+| ![](https://github.com/KL-Turner/LabVIEW-DAQ/blob/master/VI%20and%20Block%20Diagram%20Images/IOS_MainBlockDiagram.png) |
+|:--:|
+| *Figure 1: Graphical User Input (GUI) front interface* |
+
 ### Equipment
 
 | Hardware, Manufacture                         | Documentation                                                                                                | Purpose                                             |
@@ -22,11 +27,11 @@ The documentation, user manuals, diagrams, and spec sheets linked in this reposi
 | Nikon CFI75 LWD 16X W Objective               | https://www.nikon.com/products/microscope-solutions/lineup/objectives/cfi75_water_dipping_series/index.htm   | Water immersion objective                           |
 | Thorlabs LEDs M780L3 (x2)                     | https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2692&pn=M780L3#4426                                | 2 Infrared for whisker/webcam                       |
 | Thorlabs LEDD1B T-Cube LED Driver (x5)        | https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2616                                               | Power and illumination control for Thorlabs LEDs    |
-| Newport KPX076 Plano-Convex Lens (x1)         | https://www.newport.com/p/KPX076                                                                             | Columnating lens for Thorlabs LEDs                  |
+| Newport KPX124 Plano-Convex Lens (x1)         | https://www.newport.com/p/KPX124                                                                             | General lens for Thorlabs LEDs                      |
 | Basler ace acA640-120gm (camera)              | https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca640-120gm/                            | Whisker tracking camera                             |
 | Edmund Optics 35mm C Series VIS-NIR FFL Lens  | https://www.edmundoptics.com/p/35mm-c-series-vis-nir-fixed-focal-length-lens/22384/                          | Lens for whisker camera                             |
 | Tekscan FlexiForce quickstart board           | https://www.tekscan.com/products-solutions/electronics/flexiforce-quickstart-board                           | Force sensor for movement detection                 |
-| Generic Infrard USB Webcam                    | https://www.amazon.com/s?k=infrared+usb+webcam&i=electronics&ref=nb_sb_noss                                  | General purpose webcam                              |
+| Generic Infrared USB Webcam                   | https://www.amazon.com/s?k=infrared+usb+webcam&i=electronics&ref=nb_sb_noss                                  | General purpose webcam                              |
 | RW Automation Solenoid Control Board SC5      | http://www.rwautomation.com/                                                                                 | Control board for whisker, auditory stimulation     |
 | STC Solenoid Valve 2V035-1/4 (x3)             | https://www.stcvalve.com/Solenoid-Valve/2V025-035.htm                                                        | Solenoid valve that directs 10 psi of air           |
 | World Precision Instruments DAM80 (X2)        | https://www.wpiinc.com/sys-dam80-extracellular-amplifier-with-active-probe                                   | Diff Amp for 1 neural electrode, 1 EMG              |
@@ -37,6 +42,7 @@ See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror op
 
 ## Intrinsic Optical Signal (IOS) Reflectance Imaging
 ### Equipment
+
 | Hardware, Manufacture                         | Documentation                                                                              | Purpose                                             |
 | :---                                          | :---                                                                                       | :---                                                |
 | National Instruments PCI-6259                 | http://sine.ni.com/nips/cds/view/p/lang/en/nid/14128                                       | Device interface for DAQ and counter outputs        |
