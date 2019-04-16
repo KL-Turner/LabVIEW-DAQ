@@ -1,12 +1,18 @@
 # LabVIEW-DAQ
-LabVIEW VIs for behavioral characterization for both Intrinsic Optical Signal and Two-Photon imaging set-ups. This README will break down the different components and give a brief run-down of the respective parameters.
+LabVIEW VIs for behavioral characterization for both Two Photon and Intrinsic Optical Signal imaging set-ups. This README will break down the different components and give a brief run-down of the respective parameters.
 The documentation, user manuals, diagrams, and spec sheets linked in this repository are freely available online or upon request. **The company names and product names outlined in this README are trademarks, registered trademarks, or copyrights of the respective companies.**
+
+This repository has two main folders that hold the project files and associated subVIs for the Two Photon and IOS components. To open the Front panel, naviate to either fold and either open the labview project file(.lvproj) or the *MasterAcquisionFile_[2P/IOS]* file. I recommend opening the MasterAcquitionFile directly. Do not be overwhelmed by the block diagrams - Ideally, much of the Master VI's content would be subdivided into smaller more dedicated VIs, however, due to the re-iterative nature of these projects and how the legacy versions of these codes were originally written, the majority of the project's contents lies within the Master VI even though this is against good (graphical) coding practices.
 
 ## Two-Photon Excitation Microscopy
 
-| ![](https://github.com/KL-Turner/LabVIEW-DAQ/blob/master/VI%20and%20Block%20Diagram%20Images/IOS_MainBlockDiagram.png) |
+| ![](https://user-images.githubusercontent.com/30758521/56225071-b1e00c00-603e-11e9-8020-caa8a4924ce7.PNG) |
 |:--:|
-| *Figure 1: Graphical User Input (GUI) front interface* |
+| *Figure 1: MasterAcquisionFile_IOS Front Panel* |
+
+This VI runs in synchony with MScan, starting from a TTL trigger sent by MScan's scanning initiation. When run, the VI will initiate all of the hardware paths to reduce the lag time between MScan and the VI starting. It will then stand in a while loop until the designated pin receives the trigger, ending the loop and entering the DAQ loops. A Notes section for experimental parameters and any analog signals will be saved to a .tdms file with a .tdms_index file giving the parameter indeces. Any camera files are saved independently with their own respective (typically .bin) extensions. The force sensor signal is duplicated to both MScan and LabVIEW so that any remaining delay between the two can be corrected in-post. 
+
+Numerous indicator lights signal the current status of the program. Once DAQ starts, the webcam (large rectangle) and whisker camera (narrow rectange) will give real-time monitoring of the camera feeds. Numerous monitors of the analog samples, whisker camera sampling rate, and web cam sampling rate allow the user to troubleshoot any issues. A dropped-frames meter will monitor the dropped whisker camera frames. Note that the webcam is just for general purposes, and is actually not being triggered. The webcam's settings, depending on the model, can be modulated in NI MAX. While many webcams are IR sensitive, nearly all have a filter that can be removed. This is important because any significant amounts of light will pop the PMTs/ruin your image. We use a webcam as opposed to a more expensive camera because the movies are smaller in size and are only used for strange events and real-time monitoring, not in any significant data analysis. There are numerous controls for folder paths and hardware/camera IDs. For any questions regarding these, consult your respective National Instruments Device documentation and NI MAX settings. 
 
 ### Equipment
 
@@ -40,7 +46,20 @@ The documentation, user manuals, diagrams, and spec sheets linked in this reposi
 
 See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror options to direct laser path. 
 
+### Block Diagram
+
+| ![](https://user-images.githubusercontent.com/30758521/56225266-01bed300-603f-11e9-8e37-1f9290c72129.png) |
+|:--:|
+| *Figure 2: MasterAcquisionFile_2P Block Diagram* |
+
 ## Intrinsic Optical Signal (IOS) Reflectance Imaging
+
+| ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
+|:--:|
+| *Figure 3: MasterAcquisionFile_IOS Front Panel* |
+
+This VI runs independently and acquires all data itself. It shares all the same monitoring and control attributes as the Two Photon VI described above, as well as several more. In addition to the webcam and whisker camera feeds, this VI also shows the pupil diameter and IOS window in real-time.
+
 ### Equipment
 
 | Hardware, Manufacture                         | Documentation                                                                              | Purpose                                             |
@@ -70,3 +89,15 @@ See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror op
 | TENMA Dual Power supply, 280W (x2)            | http://www.tenma.com/                                                                      | Power for Basler cameras, solenoids, force sensor   |
 
 Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibrasion isolation optical tables.
+
+### Block Diagram
+| ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
+|:--:|
+| *Figure 4: MasterAcquisionFile_IOS Block Diagram* |
+
+# Acknowledgements
+* A significant amount of the IOS LabVIEW code was initially written by Dr. Patrick J. Drew.
+* Dr. Aaron T. Winder re-designed/improved the IOS code and built the original IOS DAQ setup. 
+* Kevin L. Turner redesigned/organized the IOS Front Panel and Block Diagram, adding the pupil tracking. He (I) used a significant portion of the IOS code to then design and create the Two Photon code and DAQ hardware setup.
+
+#### Feel free to contact Patrick Drew (pjd17@psu.edu) or Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
