@@ -1,4 +1,7 @@
-# LabVIEW-DAQ
+# LabVIEW-DAQ VIs and Hardware
+
+https://kl-turner.github.io/LabVIEW-DAQ/
+
 LabVIEW VIs for behavioral characterization for both Two Photon and Intrinsic Optical Signal imaging set-ups. This README will break down the different components and give a brief run-down of the respective parameters.
 The documentation, user manuals, diagrams, and spec sheets linked in this repository are freely available online or upon request. **The company names and product names outlined in this README are trademarks, registered trademarks, or copyrights of the respective companies.**
 
