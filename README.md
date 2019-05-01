@@ -10,9 +10,9 @@ This repository has two main folders that hold the project files and associated 
 
 ## Two-Photon Excitation Microscopy
 
+| MasterAcquisionFile_IOS Front Panel |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225071-b1e00c00-603e-11e9-8020-caa8a4924ce7.PNG) |
-|:----:|
-| *Figure 1: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs in synchony with MScan, starting from a TTL trigger sent by MScan's scanning initiation. When run, the VI will initiate all of the hardware paths to reduce the lag time between MScan and the VI starting. It will then stand in a while loop until the designated pin receives the trigger, ending the loop and entering the DAQ loops. A Notes section for experimental parameters and any analog signals will be saved to a .tdms file with a .tdms_index file giving the parameter indeces. Any camera files are saved independently with their own respective (typically .bin) extensions. The force sensor signal is duplicated to both MScan and LabVIEW so that any remaining delay between the two can be corrected in-post. 
 
@@ -50,17 +50,23 @@ Numerous indicator lights signal the current status of the program. Once DAQ sta
 
 See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror options to direct laser path. 
 
-### Block Diagram
-
+| MasterAcquisionFile_2P Block Diagram |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225266-01bed300-603f-11e9-8e37-1f9290c72129.png) |
-|:----:|
-| *Figure 2: MasterAcquisionFile_2P Block Diagram* |
+
+| Two-photon set-up (portable) on cart |
+| :---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039779-94f52c80-6c2b-11e9-88ca-cc21cbb70c8a.jpg) |
+
+| Full Two-Photon set-up |
+|:---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039562-fbc61600-6c2a-11e9-9cd2-2a49631e2bdb.jpg) |
 
 ## Intrinsic Optical Signal (IOS) Reflectance Imaging
 
+| MasterAcquisionFile_IOS Front Panel |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
-|:----:|
-| *Figure 3: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs independently and acquires all data itself. It shares all the same monitoring and control attributes as the Two Photon VI described above, as well as several more. In addition to the webcam and whisker camera feeds, this VI also shows the pupil diameter and IOS window in real-time.
 
@@ -94,11 +100,13 @@ This VI runs independently and acquires all data itself. It shares all the same 
 
 Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibration-isolation optical tables.
 
-### Block Diagram
-
+| MasterAcquisionFile_IOS Block Diagram |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
-|:----:|
-| *Figure 4: MasterAcquisionFile_IOS Block Diagram* |
+
+| IOS Setup |
+|:---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039686-4e9fcd80-6c2b-11e9-87bf-6891bc67a236.jpg) |
 
 # Acknowledgements
 
