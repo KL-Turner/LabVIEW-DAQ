@@ -1,4 +1,5 @@
 # LabVIEW-DAQ VIs and Hardware
+LabVIEW VIs for whisker tracking and force sensor analysis to supplement animal behavioral characterization during two photon microscopy.
 
 https://kl-turner.github.io/LabVIEW-DAQ/
 
