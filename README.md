@@ -99,10 +99,10 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 |:----:|
 *Figure 4: MasterAcquisionFile_IOS Block Diagram*
 
-
-| ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
+### Block Diagram
+| ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
 |:----:|
-| *Figure 3: MasterAcquisionFile_IOS Front Panel* |
+| *Figure 4: MasterAcquisionFile_IOS Block Diagram* |
 
 # Acknowledgements
 * A significant amount of the IOS LabVIEW code was initially written by Dr. Patrick J. Drew.
