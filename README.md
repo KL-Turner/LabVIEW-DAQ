@@ -96,12 +96,6 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 
 ### Block Diagram
 
-| ![](https://user-images.githubusercontent.com/30758521/57027901-a3cbe700-6c0b-11e9-97dd-9a1dc5a071d5.png) |
-|:----:|
-*Figure 4: MasterAcquisionFile_IOS Block Diagram*
-
-### Block Diagram
-
 | ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
 |:----:|
 | *Figure 4: MasterAcquisionFile_IOS Block Diagram* |
