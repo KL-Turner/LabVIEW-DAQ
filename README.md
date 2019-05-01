@@ -40,7 +40,7 @@ Numerous indicator lights signal the current status of the program. Once DAQ sta
 | Basler ace acA640-120gm (camera)              | https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca640-120gm/                            | Whisker tracking camera                             |
 | Edmund Optics 35mm C Series VIS-NIR FFL Lens  | https://www.edmundoptics.com/p/35mm-c-series-vis-nir-fixed-focal-length-lens/22384/                          | Lens for whisker camera                             |
 | Tekscan FlexiForce quickstart board           | https://www.tekscan.com/products-solutions/electronics/flexiforce-quickstart-board                           | Force sensor for movement detection                 |
-| Generic Infrared USB Webcam                   | https://www.amazon.com/s?k=infrared+usb+webcam&i=electronics&ref=nb_sb_noss                                  | General purpose webcam                              |
+| ELP 2.8mm wide angle IR LED Infrared USB camera                   | https://www.amazon.com/gp/product/B01E8OX14K/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1                                  | General purpose webcam                              |
 | RW Automation Solenoid Control Board SC5      | http://www.rwautomation.com/                                                                                 | Control board for whisker, auditory stimulation     |
 | STC Solenoid Valve 2V035-1/4 (x3)             | https://www.stcvalve.com/Solenoid-Valve/2V025-035.htm                                                        | Solenoid valve that directs 10 psi of air           |
 | World Precision Instruments DAM80 (X2)        | https://www.wpiinc.com/sys-dam80-extracellular-amplifier-with-active-probe                                   | Diff Amp for 1 neural electrode, 1 EMG              |
@@ -81,7 +81,7 @@ This VI runs independently and acquires all data itself. It shares all the same 
 | Basler ace acA640-120gm (camera)              | https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca640-120gm/          | Whisker tracking camera                             |
 | Edmund Optics 18mm DG Series FFL Lens         | https://www.edmundoptics.com/p/18mm-dg-series-fixed-focal-length-lens/11591/               | Lens for whisker camera                             |
 | Edmund Optics 50x50mm 660nm LED backlight     | https://www.edmundoptics.com/p/50-x-50mm-660nm-led-backlight/21332/                        | Illuminates whiskers for whisker camera             |
-| Edmund Optics 16mm C Series VIS-NIR FFL Lens  | https://www.edmundoptics.com/p/16mm-c-series-vis-nir-fixed-focal-length-lens/22382/        | Lens for pupil camera                               |
+| Edmund Optics 75 mm DG Series FFL Lens  | https://www.edmundoptics.com/p/75mm-dg-series-fixed-focal-length-lens/11371/        | Lens for pupil camera                               |
 | Tekscan FlexiForce quickstart board           | https://www.tekscan.com/products-solutions/electronics/flexiforce-quickstart-board         | Force sensor for movement detection                 |
 | Microsoft Lifecam Cinema                      | https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-cinema/h5d-00013      | General purpose webcam                              |
 | RW Automation Solenoid Control Board SC5      | http://www.rwautomation.com/                                                               | Control board for whisker, auditory stimulation     |
@@ -103,4 +103,4 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 * Dr. Aaron T. Winder re-designed/improved the IOS code and built the original IOS DAQ setup. 
 * Kevin L. Turner redesigned/organized the IOS Front Panel and Block Diagram, adding the pupil tracking. He (I) used a significant portion of the IOS code to then design and create the Two Photon code and DAQ hardware setup.
 
-#### Feel free to contact Patrick Drew (pjd17@psu.edu) or Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
+#### Feel free to contact Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
