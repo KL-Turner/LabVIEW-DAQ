@@ -91,7 +91,7 @@ This VI runs independently and acquires all data itself. It shares all the same 
 | Tektronix TDS 2014C Oscilloscope (x2)         | https://www.tek.com/oscilloscope/tds2000-digital-storage-oscilloscope                      | Monitor signals in real time                        |
 | TENMA Dual Power supply, 280W (x2)            | http://www.tenma.com/                                                                      | Power for Basler cameras, solenoids, force sensor   |
 
-Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibrasion isolation optical tables.
+Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibration-isolation optical tables.
 
 ### Block Diagram
 | ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
