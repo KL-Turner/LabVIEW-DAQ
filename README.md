@@ -11,7 +11,7 @@ This repository has two main folders that hold the project files and associated 
 ## Two-Photon Excitation Microscopy
 
 | ![](https://user-images.githubusercontent.com/30758521/56225071-b1e00c00-603e-11e9-8020-caa8a4924ce7.PNG) |
-|:--:|
+|:----:|
 | *Figure 1: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs in synchony with MScan, starting from a TTL trigger sent by MScan's scanning initiation. When run, the VI will initiate all of the hardware paths to reduce the lag time between MScan and the VI starting. It will then stand in a while loop until the designated pin receives the trigger, ending the loop and entering the DAQ loops. A Notes section for experimental parameters and any analog signals will be saved to a .tdms file with a .tdms_index file giving the parameter indeces. Any camera files are saved independently with their own respective (typically .bin) extensions. The force sensor signal is duplicated to both MScan and LabVIEW so that any remaining delay between the two can be corrected in-post. 
@@ -53,13 +53,13 @@ See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror op
 ### Block Diagram
 
 | ![](https://user-images.githubusercontent.com/30758521/56225266-01bed300-603f-11e9-8e37-1f9290c72129.png) |
-|:--:|
+|:----:|
 | *Figure 2: MasterAcquisionFile_2P Block Diagram* |
 
 ## Intrinsic Optical Signal (IOS) Reflectance Imaging
 
 | ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
-|:--:|
+|:----:|
 | *Figure 3: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs independently and acquires all data itself. It shares all the same monitoring and control attributes as the Two Photon VI described above, as well as several more. In addition to the webcam and whisker camera feeds, this VI also shows the pupil diameter and IOS window in real-time.
@@ -96,7 +96,7 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 
 ### Block Diagram
 | ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
-|:--:|
+|:----:|
 *Figure 4: MasterAcquisionFile_IOS Block Diagram*
 
 
