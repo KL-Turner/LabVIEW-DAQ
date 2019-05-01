@@ -103,4 +103,4 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 * Dr. Aaron T. Winder re-designed/improved the IOS code and built the original IOS DAQ setup. 
 * Kevin L. Turner redesigned/organized the IOS Front Panel and Block Diagram, adding the pupil tracking. He (I) used a significant portion of the IOS code to then design and create the Two Photon code and DAQ hardware setup.
 
-#### Feel free to contact Patrick Drew (pjd17@psu.edu) or Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
+#### Feel free to contact Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
