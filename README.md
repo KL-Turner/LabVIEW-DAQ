@@ -100,6 +100,10 @@ Both imaging systems are built with numerous Thorlabs components, in particular 
 *Figure 4: MasterAcquisionFile_IOS Block Diagram*
 
 
+| ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
+|:----:|
+| *Figure 3: MasterAcquisionFile_IOS Front Panel* |
+
 # Acknowledgements
 * A significant amount of the IOS LabVIEW code was initially written by Dr. Patrick J. Drew.
 * Dr. Aaron T. Winder re-designed/improved the IOS code and built the original IOS DAQ setup. 
