@@ -1,4 +1,5 @@
 # LabVIEW-DAQ VIs and Hardware
+LabVIEW VIs for whisker tracking and force sensor analysis to supplement animal behavioral characterization during two photon microscopy.
 
 https://kl-turner.github.io/LabVIEW-DAQ/
 
@@ -9,9 +10,9 @@ This repository has two main folders that hold the project files and associated 
 
 ## Two-Photon Excitation Microscopy
 
+| MasterAcquisionFile_IOS Front Panel |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225071-b1e00c00-603e-11e9-8020-caa8a4924ce7.PNG) |
-|:--:|
-| *Figure 1: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs in synchony with MScan, starting from a TTL trigger sent by MScan's scanning initiation. When run, the VI will initiate all of the hardware paths to reduce the lag time between MScan and the VI starting. It will then stand in a while loop until the designated pin receives the trigger, ending the loop and entering the DAQ loops. A Notes section for experimental parameters and any analog signals will be saved to a .tdms file with a .tdms_index file giving the parameter indeces. Any camera files are saved independently with their own respective (typically .bin) extensions. The force sensor signal is duplicated to both MScan and LabVIEW so that any remaining delay between the two can be corrected in-post. 
 
@@ -40,7 +41,7 @@ Numerous indicator lights signal the current status of the program. Once DAQ sta
 | Basler ace acA640-120gm (camera)              | https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca640-120gm/                            | Whisker tracking camera                             |
 | Edmund Optics 35mm C Series VIS-NIR FFL Lens  | https://www.edmundoptics.com/p/35mm-c-series-vis-nir-fixed-focal-length-lens/22384/                          | Lens for whisker camera                             |
 | Tekscan FlexiForce quickstart board           | https://www.tekscan.com/products-solutions/electronics/flexiforce-quickstart-board                           | Force sensor for movement detection                 |
-| Generic Infrared USB Webcam                   | https://www.amazon.com/s?k=infrared+usb+webcam&i=electronics&ref=nb_sb_noss                                  | General purpose webcam                              |
+| ELP 2.8mm wide angle IR LED Infrared USB camera                   | https://www.amazon.com/gp/product/B01E8OX14K/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1                                  | General purpose webcam                              |
 | RW Automation Solenoid Control Board SC5      | http://www.rwautomation.com/                                                                                 | Control board for whisker, auditory stimulation     |
 | STC Solenoid Valve 2V035-1/4 (x3)             | https://www.stcvalve.com/Solenoid-Valve/2V025-035.htm                                                        | Solenoid valve that directs 10 psi of air           |
 | World Precision Instruments DAM80 (X2)        | https://www.wpiinc.com/sys-dam80-extracellular-amplifier-with-active-probe                                   | Diff Amp for 1 neural electrode, 1 EMG              |
@@ -49,17 +50,23 @@ Numerous indicator lights signal the current status of the program. Once DAQ sta
 
 See https://www.edmundoptics.com/search/?criteria=mirror%20coating for mirror options to direct laser path. 
 
-### Block Diagram
-
+| MasterAcquisionFile_2P Block Diagram |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225266-01bed300-603f-11e9-8e37-1f9290c72129.png) |
-|:--:|
-| *Figure 2: MasterAcquisionFile_2P Block Diagram* |
+
+| Two-photon set-up (portable) on cart |
+| :---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039779-94f52c80-6c2b-11e9-88ca-cc21cbb70c8a.jpg) |
+
+| Full Two-Photon set-up |
+|:---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039562-fbc61600-6c2a-11e9-9cd2-2a49631e2bdb.jpg) |
 
 ## Intrinsic Optical Signal (IOS) Reflectance Imaging
 
+| MasterAcquisionFile_IOS Front Panel |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225298-13a07600-603f-11e9-8836-ba6a879f88ea.PNG) |
-|:--:|
-| *Figure 3: MasterAcquisionFile_IOS Front Panel* |
 
 This VI runs independently and acquires all data itself. It shares all the same monitoring and control attributes as the Two Photon VI described above, as well as several more. In addition to the webcam and whisker camera feeds, this VI also shows the pupil diameter and IOS window in real-time.
 
@@ -81,7 +88,7 @@ This VI runs independently and acquires all data itself. It shares all the same 
 | Basler ace acA640-120gm (camera)              | https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca640-120gm/          | Whisker tracking camera                             |
 | Edmund Optics 18mm DG Series FFL Lens         | https://www.edmundoptics.com/p/18mm-dg-series-fixed-focal-length-lens/11591/               | Lens for whisker camera                             |
 | Edmund Optics 50x50mm 660nm LED backlight     | https://www.edmundoptics.com/p/50-x-50mm-660nm-led-backlight/21332/                        | Illuminates whiskers for whisker camera             |
-| Edmund Optics 16mm C Series VIS-NIR FFL Lens  | https://www.edmundoptics.com/p/16mm-c-series-vis-nir-fixed-focal-length-lens/22382/        | Lens for pupil camera                               |
+| Edmund Optics 75 mm DG Series FFL Lens  | https://www.edmundoptics.com/p/75mm-dg-series-fixed-focal-length-lens/11371/        | Lens for pupil camera                               |
 | Tekscan FlexiForce quickstart board           | https://www.tekscan.com/products-solutions/electronics/flexiforce-quickstart-board         | Force sensor for movement detection                 |
 | Microsoft Lifecam Cinema                      | https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-cinema/h5d-00013      | General purpose webcam                              |
 | RW Automation Solenoid Control Board SC5      | http://www.rwautomation.com/                                                               | Control board for whisker, auditory stimulation     |
@@ -91,16 +98,20 @@ This VI runs independently and acquires all data itself. It shares all the same 
 | Tektronix TDS 2014C Oscilloscope (x2)         | https://www.tek.com/oscilloscope/tds2000-digital-storage-oscilloscope                      | Monitor signals in real time                        |
 | TENMA Dual Power supply, 280W (x2)            | http://www.tenma.com/                                                                      | Power for Basler cameras, solenoids, force sensor   |
 
-Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibrasion isolation optical tables.
+Both imaging systems are built with numerous Thorlabs components, in particular https://www.thorlabs.com/navigation.cfm?guide_id=50 on vibration-isolation optical tables.
 
-### Block Diagram
+| MasterAcquisionFile_IOS Block Diagram |
+|:----|
 | ![](https://user-images.githubusercontent.com/30758521/56225312-1d29de00-603f-11e9-96fe-c1e7ee181918.png) |
-|:--:|
-| *Figure 4: MasterAcquisionFile_IOS Block Diagram* |
+
+| IOS Setup |
+|:---- |
+| ![](https://user-images.githubusercontent.com/30758521/57039686-4e9fcd80-6c2b-11e9-87bf-6891bc67a236.jpg) |
 
 # Acknowledgements
+
 * A significant amount of the IOS LabVIEW code was initially written by Dr. Patrick J. Drew.
 * Dr. Aaron T. Winder re-designed/improved the IOS code and built the original IOS DAQ setup. 
 * Kevin L. Turner redesigned/organized the IOS Front Panel and Block Diagram, adding the pupil tracking. He (I) used a significant portion of the IOS code to then design and create the Two Photon code and DAQ hardware setup.
 
-#### Feel free to contact Patrick Drew (pjd17@psu.edu) or Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
+#### Feel free to contact Kevin Turner (klt8@psu.edu) with any questions regarding the hardware or VIs. 
