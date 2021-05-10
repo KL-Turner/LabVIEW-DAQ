@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="18008000">
+<Project Type="Project" LVVersion="20008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -11,11 +11,9 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="GenerateFilenames_IOS.vi" Type="VI" URL="../GenerateFilenames_IOS.vi"/>
-		<Item Name="GenerateStimulusOutputs_IOS_Optogenetics.vi" Type="VI" URL="../GenerateStimulusOutputs_IOS_Optogenetics.vi"/>
+		<Item Name="GenerateStimulusOutputs_IOS.vi" Type="VI" URL="../GenerateStimulusOutputs_IOS.vi"/>
 		<Item Name="GrabWebCam_IOS.vi" Type="VI" URL="../GrabWebCam_IOS.vi"/>
 		<Item Name="MasterAquisitionFile_IOS.vi" Type="VI" URL="../MasterAquisitionFile_IOS.vi"/>
-		<Item Name="MasterAquisitionFile_IOS_Optogenetics.vi" Type="VI" URL="../MasterAquisitionFile_IOS_Optogenetics.vi"/>
-		<Item Name="MasterAquisitionFile_IOS_Ultrasound.vi" Type="VI" URL="../MasterAquisitionFile_IOS_Ultrasound.vi"/>
 		<Item Name="TrackPupilDroppedFrames_IOS.vi" Type="VI" URL="../TrackPupilDroppedFrames_IOS.vi"/>
 		<Item Name="TrackWhiskDroppedFrames_IOS.vi" Type="VI" URL="../TrackWhiskDroppedFrames_IOS.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -107,7 +105,6 @@
 				<Item Name="DAQmx Create Channel (TEDS-AI-Voltage-Custom with Excitation).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Channel (TEDS-AI-Voltage-Custom with Excitation).vi"/>
 				<Item Name="DAQmx Create Virtual Channel.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/create/channels.llb/DAQmx Create Virtual Channel.vi"/>
 				<Item Name="DAQmx Fill In Error Info.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Fill In Error Info.vi"/>
-				<Item Name="DAQmx Flatten Channel String.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Flatten Channel String.vi"/>
 				<Item Name="DAQmx Read (Analog 1D DBL 1Chan NSamp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Analog 1D DBL 1Chan NSamp).vi"/>
 				<Item Name="DAQmx Read (Analog 1D DBL NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Analog 1D DBL NChan 1Samp).vi"/>
 				<Item Name="DAQmx Read (Analog 1D Wfm NChan 1Samp).vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/read.llb/DAQmx Read (Analog 1D Wfm NChan 1Samp).vi"/>
@@ -336,7 +333,6 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="GenerateStimulusOutputs_Optogenetics.vi" Type="VI" URL="../GenerateStimulusOutputs_Optogenetics.vi"/>
 			<Item Name="imaq.dll" Type="Document" URL="imaq.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
