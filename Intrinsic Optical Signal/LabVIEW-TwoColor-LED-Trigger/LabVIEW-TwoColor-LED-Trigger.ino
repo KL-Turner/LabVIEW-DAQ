@@ -13,11 +13,11 @@
 //____________________________________________________________________________________________________________________________________________
 
 // Initializes pins to be represented by a variable (int <variable name> = <pin #>).
-int blueLEDs = 3;             // blue LEDs output pin (4 T-Cube LED drivers attached to a BNC breakout board).
-int greenLEDs = 5;           // green LEDs output pin (4 T-Cube LED drivers attached to a BNC breakout board).
-int labviewTrialState = 7;    // Input from LabVIEW to indicate when data acquisition is running
 int IOScam = 9;               // IOS camera output pin
-int inputSource = 11;          // Waveform Generator - Square wave with adjustable frequency. Serves as the Input for times between trials.
+int blueLEDs = 3;             // blue LEDs output pin (4 T-Cube LED drivers attached to a BNC breakout board).
+int greenLEDs = 5;            // green LEDs output pin (4 T-Cube LED drivers attached to a BNC breakout board).
+int inputSource = 11;         // Waveform Generator - Square wave with adjustable frequency. Serves as the Input for times between trials.
+int labviewTrialState = 7;    // Input from LabVIEW to indicate when data acquisition is running
 int monitor = 13;             // For debugging/testing
 
 // State variables.  See the void loop() function for a detailed explanation of each variable state's function.
@@ -78,7 +78,7 @@ void loop()
         prevBlueState = 1;                      // Conforms the state variable of blue LEDs to what its state is (blue LEDs is HIGH, so state variable changed to 1)
         prevGreenState = 0;                     // Conforms the state variable of greenL EDs to what its state is (green LEDs is LOW, so state variable changed to 0)
       }
-      else 
+      else
       {
         if (trialState == HIGH)
         {
@@ -91,21 +91,6 @@ void loop()
         digitalWrite(greenLEDs,HIGH); 
         prevBlueState = 0;                      // Conforms the state variable of blue LEDs to what its state is (blue LEDs is LOW, so state variable changed to 0)
         prevGreenState = 1;                     // Conforms the state variable of green LEDs to what its state is (blue LEDs is HIGH, so state variable changed to 1)
-      }      
-       else 
-      {
-        if (trialState == HIGH)
-        {
-          digitalWrite(IOScam,HIGH); 
-        }
-        else
-        {
-          digitalWrite(IOScam,LOW);
-        }
-        digitalWrite(greenLEDs,HIGH); 
-        prevBlueState = 0;                      // Conforms the state variable of blue LEDs to what its state is (blue LEDs is LOW, so state variable changed to 0)
-        prevGreenState = 0;                     // Conforms the state variable of green LEDs to what its state is (blue LEDs is HIGH, so state variable changed to 1)
-        Prev
       }      
     }
     else
